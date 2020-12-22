@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './movie-info.css';
 
 class Movie extends Component {
 
@@ -22,10 +23,10 @@ class Movie extends Component {
 
     render() {
         return(
-            <div>
+            <div className="filme-info">
                 <h1>{this.state.filme.nome}</h1>
                 <img src={this.state.filme.foto}></img>
-                <h3>Sinopse</h3>
+                {this.state.filme.length !== 0 && <h3>Sinopse</h3>}
                 {this.state.filme.sinopse}
             </div>
         );
